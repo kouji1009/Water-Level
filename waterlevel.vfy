@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!--Velocio Factory 1.0-->
+<!--www.VelocioNetworks.com-->
+<VelocioNetworks>
+  <elementPageTag sAddress="vFactoryPage" sIndex="" dtAddress="UI16" bWholeArray="False" />
+  <Page Name="Home">
+    <Label height="1" width="4" x="8" y="5" myLableType="Label" sRecipe="" align="left" myColor="black" sText="Valve1" />
+    <Label height="1" width="4" x="8" y="7" myLableType="Label" sRecipe="" align="left" myColor="black" sText="Valve2" />
+    <Label height="1" width="4" x="8" y="9" myLableType="Label" sRecipe="" align="left" myColor="black" sText="light heater" />
+    <Label height="1" width="4" x="9" y="11" myLableType="Label" sRecipe="" align="left" myColor="black" sText="temperature" />
+    <Slider height="1" width="4" x="7" y="12">
+      <eValue sAddress="temparature" sIndex="" dtAddress="UI16" bWholeArray="False" />
+      <eMin sAddress="0" sIndex="" dtAddress="UI16" bWholeArray="False" />
+      <eMax sAddress="60" sIndex="" dtAddress="UI16" bWholeArray="False" />
+    </Slider>
+    <Radio height="2" width="5" x="6" y="2">
+      <eRadio sAddress="button" sIndex="" dtAddress="Bit" bWholeArray="False" />
+      <value sAddress="1" sIndex="" dtAddress="Bit" bWholeArray="False" />
+      <label text="on" />
+      <value sAddress="0" sIndex="" dtAddress="Bit" bWholeArray="False" />
+      <label text="off" />
+    </Radio>
+    <Label height="1" width="4" x="17" y="10" myLableType="Label" sRecipe="" align="left" myColor="black" sText="waterlevel" />
+    <Label height="1" width="4" x="22" y="10" myLableType="Label" sRecipe="" align="left" myColor="black" sText="temperature" />
+    <Button height="1" width="4" x="14" y="1" myButtonType="Button" sRecipe="" sLabel="reset">
+      <eButton sAddress="reset" sIndex="" dtAddress="Bit" bWholeArray="False" />
+      <eValue sAddress="1" sIndex="" dtAddress="Bit" bWholeArray="False" />
+    </Button>
+    <Button height="1" width="4" x="14" y="2" myButtonType="Button" sRecipe="" sLabel="emergency">
+      <eButton sAddress="emergency" sIndex="" dtAddress="Bit" bWholeArray="False" />
+      <eValue sAddress="1" sIndex="" dtAddress="Bit" bWholeArray="False" />
+    </Button>
+    <BarGraph height="4" width="4" x="26" y="16" iColor1="5" iColor2="4" iColor3="3" iColor4="2" iColor5="1" iColor6="0" fMin="0" fMax="60">
+      <eKey1 sAddress="TEMPA1" sIndex="" dtAddress="I16" bWholeArray="False" />
+    </BarGraph>
+    <LineGraph height="4" width="4" x="22" y="5" iColor1="5" iColor2="4" iColor3="3" iColor4="2" iColor5="1" iColor6="0" fMin="0" fMax="60" iTimeLength="30" myTimeInc="minute">
+      <eKey1 sAddress="temparature" sIndex="" dtAddress="UI16" bWholeArray="False" />
+    </LineGraph>
+    <BarGraph height="4" width="4" x="17" y="5" iColor1="5" iColor2="4" iColor3="3" iColor4="2" iColor5="1" iColor6="0" fMin="0" fMax="100">
+      <eKey1 sAddress="waterlevel" sIndex="" dtAddress="Char" bWholeArray="False" />
+    </BarGraph>
+    <Light height="1" width="1" x="6" y="7" onColor="blue">
+      <eKeyLight sAddress="valve2D2" sIndex="" dtAddress="Bit" bWholeArray="False" />
+    </Light>
+    <Light height="1" width="1" x="6" y="9" onColor="orange">
+      <eKeyLight sAddress="heaterD3" sIndex="" dtAddress="Bit" bWholeArray="False" />
+    </Light>
+    <Light height="1" width="1" x="6" y="5" onColor="green">
+      <eKeyLight sAddress="valve1D1" sIndex="" dtAddress="Bit" bWholeArray="False" />
+    </Light>
+  </Page>
+</VelocioNetworks>
